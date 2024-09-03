@@ -48,7 +48,7 @@ public class Main {
                 System.out.println("Digite o valor a ser transferido: ");
                 int transfere = scanner.nextInt();
                 boolean valida = (transfere > saldo);
-                if (valida == true) {
+                if (valida) {
                     System.out.println("Saldo insuficiente para transferir");
                 } else {saldo = saldo - transfere;
                     System.out.println("Você Transferiu :" + transfere);
