@@ -5,32 +5,37 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int saldo = 2200;
-        boolean conta = true;
+        int saldo = 2550;
+        String conta = "Conta Corrente";
         String nome = "Gabriel";
-
-
-        System.out.println("********************");
-        System.out.println("_");
-        System.out.println("Dados iniciais do Cliente");
-        System.out.println("Nome: " + nome);
-        System.out.println("Tipo de Conta: " + conta);
-        System.out.println("Saldo inicial: " + saldo);
-        System.out.println("_");
-        System.out.println("********************");
-
-
         int escolha = 0;
 
 
+        System.out.println("********************");
+        System.out.println("\nDados iniciais do Cliente");
+        System.out.println("Nome: " + nome);
+        System.out.println("Tipo de Conta: " + conta);
+        System.out.println("Saldo inicial: " + saldo);
+        System.out.println("\n********************");
+
+
+        String menu = """
+                ** Digite sua opção **
+                1 - Consultar saldo
+                2 - Receber valor
+                3 - Transferir valor\s
+                4 - Sair
+
+               \s""";
+        Scanner leitura = new Scanner(System.in);
+
+
+
         while (escolha != 4) {
-            System.out.println("-----Menu-----");
-            System.out.println("1. Consultar Saldo");
-            System.out.println("2. Receber valor");
-            System.out.println("3. Transferir valor");
-            System.out.println("4. Sair");
-            System.out.print("Escolha uma opção: ");
-            escolha = scanner.nextInt();
+            System.out.println(menu);
+             escolha = leitura.nextInt();
+
+
 
             if (escolha == 1) {
                 System.out.println("Seu Saldo é : " + saldo);
